@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply bg-[#F7FAF9] text-gray-800 antialiased text-base;
+  }
+
+  /* Make interactive targets easily tapable for elderly users */
+  button, input, select, textarea {
+    font-family: inherit;
+    @apply outline-none;
+  }
+
+  button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+    @apply ring-2 ring-[#138A72] ring-offset-2;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
